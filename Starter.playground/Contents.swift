@@ -50,7 +50,14 @@ example(of: "map key paths") {
 }
 
 example(of: "tryMap") {
-    
+    // 1
+    Just("Directory name that does not exist")
+    // 2
+        .tryMap { try? FileManager.default.contentsOfDirectory(atPath: $0) }
+    // 3
+        .sink(receiveCompletion: { print($0) },
+              receiveValue: { print($0) })
+        .store(in: &subscriptions)
 }
 
 
