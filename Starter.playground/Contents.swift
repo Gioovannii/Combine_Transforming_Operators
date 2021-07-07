@@ -28,6 +28,9 @@ example(of: "map") {
         .store(in: &subscriptions)
 }
 
+example(of: "map key paths") {
+    
+}
 
 
 
