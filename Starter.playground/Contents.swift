@@ -12,7 +12,21 @@ example(of: "collect") {
         .store(in: &subscriptions)
 }
 
-
+example(of: "map") {
+    //1 Create a number formatter to spell out each number
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .spellOut
+    
+    // 2 Create a publisher of integers
+    [123, 4, 56].publisher
+    
+    // 3 use map passing a closure to get upstream values and return the result of using the formatter to return the number's spelled out string
+        .map {
+            formatter.string(from: NSNumber(integerLiteral: $0)) ?? ""
+        }
+        .sink(receiveValue: { print($0) })
+        .store(in: &subscriptions)
+}
 
 
 
