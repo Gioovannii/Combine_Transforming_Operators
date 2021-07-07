@@ -29,7 +29,24 @@ example(of: "map") {
 }
 
 example(of: "map key paths") {
+    // 1 Create a publisher of coordinate that will never emit an error
+    let publisher = PassthroughSubject<Coordinate, Never>()
+   
+    // 2 Begin a subscription to the publisher 
+    publisher
+        // 3
+        .map(\.x, \.y)
+        .sink(receiveValue: { x, y in
+            // 4
+            print("The coordinate at (\(x), \(y)) is a quardant",
+                  quadrantOf(x: x, y: y)
+            )
+        })
+        .store(in: &subscriptions)
     
+    // 5
+    publisher.send(Coordinate(x: 10, y: -8))
+    publisher.send(Coordinate(x: 0, y: 5))
 }
 
 
