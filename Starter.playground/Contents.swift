@@ -3,7 +3,11 @@ import Combine
 
 var subscriptions = Set<AnyCancellable>()
 
-<#Add your code here#>
+
+example(of: "collect") {
+    
+}
+
 
 /// Copyright (c) 2020 Razeware LLC
 ///
