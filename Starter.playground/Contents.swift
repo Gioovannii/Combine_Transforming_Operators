@@ -49,6 +49,9 @@ example(of: "map key paths") {
     publisher.send(Coordinate(x: 0, y: 5))
 }
 
+example(of: "tryMap") {
+    
+}
 
 
 
