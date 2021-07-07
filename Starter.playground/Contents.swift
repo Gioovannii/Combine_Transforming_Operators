@@ -50,11 +50,11 @@ example(of: "map key paths") {
 }
 
 example(of: "tryMap") {
-    // 1
+    // 1 Create a publisher of string representing directory name that does nort exist
     Just("Directory name that does not exist")
-    // 2
-        .tryMap { try? FileManager.default.contentsOfDirectory(atPath: $0) }
-    // 3
+    // 2 USe try map to attempt to get the content of that nonexistent directory
+        .tryMap { try FileManager.default.contentsOfDirectory(atPath: $0) }
+    // 3 Receive and print ou any values or completion event
         .sink(receiveCompletion: { print($0) },
               receiveValue: { print($0) })
         .store(in: &subscriptions)
