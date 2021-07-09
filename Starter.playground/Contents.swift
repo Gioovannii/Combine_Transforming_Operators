@@ -89,6 +89,10 @@ example(of: "flatMap") {
 }
 
 
+example(of: "replaceNil") {
+    
+}
+
 
 
 /// Copyright (c) 2020 Razeware LLC
