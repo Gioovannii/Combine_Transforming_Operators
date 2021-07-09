@@ -77,7 +77,15 @@ example(of: "flatMap") {
         // 4 type erase publisher to match return type
         .eraseToAnyPublisher()
     }
-   
+    
+    // 5
+    [72, 101, 108, 108, 111, 44, 32, 87, 111, 114, 108, 100, 33]
+        .publisher
+        .collect()
+
+        .flatMap(decode)
+        .sink(receiveValue: { print($0) })
+        .store(in: &subscriptions)
 }
 
 
