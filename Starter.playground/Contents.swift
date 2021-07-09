@@ -60,6 +60,14 @@ example(of: "tryMap") {
         .store(in: &subscriptions)
 }
 
+example(of: "flatMap") {
+    // 1 Define func that take an array of integer, each reprendting ASCII code,
+    // and returns a type-erased publisher of string that never emit error
+    func decode(_ codes: [Int]) -> AnyPublisher<String, Never> {
+        // 2 Create just publisher convert the character code to string
+        
+}
+
 
 
 
