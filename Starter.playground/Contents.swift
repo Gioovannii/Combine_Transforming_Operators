@@ -71,7 +71,10 @@ example(of: "flatMap") {
                     guard (32...255).contains(code) else { return nil }
                     return String(UnicodeScalar(code) ?? " ")
                 }
-           
+                // 3 joined string
+                    .joined()
+            )
+         
 }
 
 
