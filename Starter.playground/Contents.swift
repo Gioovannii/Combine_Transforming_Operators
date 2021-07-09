@@ -74,7 +74,10 @@ example(of: "flatMap") {
                 // 3 joined string
                     .joined()
             )
-         
+        // 4 type erase publisher to match return type
+        .eraseToAnyPublisher()
+    }
+   
 }
 
 
