@@ -90,7 +90,9 @@ example(of: "flatMap") {
 
 
 example(of: "replaceNil") {
-    
+    // 1
+    ["A", nil, "B"].publisher
+      
 }
 
 
