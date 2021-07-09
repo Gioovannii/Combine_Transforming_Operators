@@ -92,7 +92,10 @@ example(of: "flatMap") {
 example(of: "replaceNil") {
     // 1
     ["A", nil, "B"].publisher
-      
+        .eraseToAnyPublisher()
+        .replaceNil(with: "-") // 2
+        .sink(receiveValue: { print($0) }) // 3
+        .store(in: &subscriptions)
 }
 
 
