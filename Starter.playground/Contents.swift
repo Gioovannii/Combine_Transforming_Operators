@@ -105,6 +105,7 @@ example(of: "replaceEmppty(with:)") {
     
     // 2 subscribe to it and print received event 
     empty
+        .replaceEmpty(with: 1)
         .sink(receiveCompletion: { print($0) },
               receiveValue: { print($0) })
         .store(in: &subscriptions)
