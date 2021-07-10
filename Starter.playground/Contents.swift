@@ -94,7 +94,7 @@ example(of: "replaceNil") {
     ["A", nil, "B"].publisher
         .eraseToAnyPublisher()
         .replaceNil(with: "-") // 2 USe replace(with:) to replace nil value
-        .sink(receiveValue: { print($0) }) // 3
+        .sink(receiveValue: { print($0) }) // 3 print out value 
         .store(in: &subscriptions)
 }
 
