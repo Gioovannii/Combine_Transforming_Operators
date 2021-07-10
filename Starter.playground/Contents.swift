@@ -103,7 +103,7 @@ example(of: "replaceEmppty(with:)") {
     // 1 create empty publisher
     let empty = Empty<Int, Never>()
     
-    // 2
+    // 2 subscribe to it and print received event 
     empty
         .sink(receiveCompletion: { print($0) },
               receiveValue: { print($0) })
