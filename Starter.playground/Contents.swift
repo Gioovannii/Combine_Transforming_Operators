@@ -99,6 +99,17 @@ example(of: "replaceNil") {
 }
 
 
+example(of: "replaceEmppty(with:)") {
+    // 1
+    let empty = Empty<Int, Never>()
+    
+    // 2
+    empty
+        .sink(receiveCompletion: { print($0) },
+              receiveValue: { print($0) })
+        
+}
+
 
 /// Copyright (c) 2020 Razeware LLC
 ///
