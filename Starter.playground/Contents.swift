@@ -107,7 +107,7 @@ example(of: "replaceEmppty(with:)") {
     empty
         .sink(receiveCompletion: { print($0) },
               receiveValue: { print($0) })
-        
+        .store(in: &subscriptions)
 }
 
 
