@@ -90,7 +90,7 @@ example(of: "flatMap") {
 
 
 example(of: "replaceNil") {
-    // 1
+    // 1 Create a publisher from an array of optional strings
     ["A", nil, "B"].publisher
         .eraseToAnyPublisher()
         .replaceNil(with: "-") // 2
