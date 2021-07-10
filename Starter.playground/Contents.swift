@@ -100,7 +100,7 @@ example(of: "replaceNil") {
 
 
 example(of: "replaceEmppty(with:)") {
-    // 1
+    // 1 create empty publisher
     let empty = Empty<Int, Never>()
     
     // 2
