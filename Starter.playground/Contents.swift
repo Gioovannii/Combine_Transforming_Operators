@@ -67,6 +67,8 @@ example(of: "tryMap") {
         .store(in: &subscriptions)
 }
 
+// MARK: - Flat map
+
 example(of: "flatMap") {
     // 1 Define func that take an array of integer, each reprendting ASCII code,
     // and returns a type-erased publisher of string that never emit error
