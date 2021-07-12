@@ -3,6 +3,7 @@ import Combine
 
 var subscriptions = Set<AnyCancellable>()
 
+// MARK: - COLLECT
 
 example(of: "collect") {
     ["A", "B", "C", "D", "E"].publisher
