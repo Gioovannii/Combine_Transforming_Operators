@@ -97,6 +97,7 @@ example(of: "flatMap") {
         .store(in: &subscriptions)
 }
 
+// MARK: - Replace nil
 
 example(of: "replaceNil") {
     // 1 Create a publisher from an array of optional strings
