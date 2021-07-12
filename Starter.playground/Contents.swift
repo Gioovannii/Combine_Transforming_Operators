@@ -13,6 +13,8 @@ example(of: "collect") {
         .store(in: &subscriptions)
 }
 
+// MARK: - Map
+
 example(of: "map") {
     //1 Create a number formatter to spell out each number
     let formatter = NumberFormatter()
