@@ -132,7 +132,14 @@ example(of: "scan") {
     let august2019 = (0..<22)
         .map { _ in dailyGainLoss }
         .publisher
-   
+    
+    // 3 Use scan with starting value of 50, and add daily change to running stock price. max keep positive values
+        august2019
+        .scan(50) { latest, current in
+            max(0, latest + current)
+        }
+        .sink(receiveValue: { _ in })
+        .store(in: &subscriptions)
 }
 
 
