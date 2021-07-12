@@ -128,7 +128,11 @@ example(of: "scan") {
     // 1 Create a computed property that generate random number between -10 and 10
     var dailyGainLoss: Int { .random(in: -10...10) }
     
-    
+    // 2 Use this generator to create publisher from array of integer
+    let august2019 = (0..<22)
+        .map { _ in dailyGainLoss }
+        .publisher
+   
 }
 
 
