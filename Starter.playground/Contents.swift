@@ -54,6 +54,8 @@ example(of: "map key paths") {
     publisher.send(Coordinate(x: 0, y: 5))
 }
 
+// MARK: - Try map
+
 example(of: "tryMap") {
     // 1 Create a publisher of string representing directory name that does nort exist
     Just("Directory name that does not exist")
