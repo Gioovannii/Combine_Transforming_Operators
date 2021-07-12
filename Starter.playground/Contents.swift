@@ -122,6 +122,15 @@ example(of: "replaceEmppty(with:)") {
         .store(in: &subscriptions)
 }
 
+// MARK: - Scan
+
+example(of: "scan") {
+    // 1 Create a computed property that generate random number between -10 and 10
+    var dailyGainLoss: Int { .random(in: -10...10) }
+    
+    
+}
+
 
 /// Copyright (c) 2020 Razeware LLC
 ///
