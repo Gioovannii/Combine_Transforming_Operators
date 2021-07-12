@@ -31,6 +31,8 @@ example(of: "map") {
         .store(in: &subscriptions)
 }
 
+// MARK: - Map key path
+
 example(of: "map key paths") {
     // 1 Create a publisher of coordinate that will never emit an error
     let publisher = PassthroughSubject<Coordinate, Never>()
